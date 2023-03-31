@@ -14,7 +14,13 @@ app.get('/pokemon',(req,res)=>{
 });
 
 app.get('/pokemon/:id',(req,res)=>{
-    res.send(pokemons[req.params.id]);
+    const id=req.params.id;
+    const back = ''
+    console.log(back);
+    res.render('Show', {
+        pokemon: pokemons[id],
+        back: back
+    });
 });
 
 app.listen(PORT,()=> {
