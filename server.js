@@ -1,6 +1,6 @@
 const express = require('express');
 const app=express();
-const pokemon = require('./models/pokemon.js');
+const pokemons = require('./models/pokemon.js');
 const PORT=process.env.PORT||3000;
 app.set('view engine', 'jsx');
   app.engine('jsx', require('express-react-views').createEngine());
